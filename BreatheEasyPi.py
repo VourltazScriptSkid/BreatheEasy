@@ -112,7 +112,7 @@ def send_ifttt_notification():
                     'value3': f"MQ135: {mq135}, Air Quality: {air_quality}"
                 }
                 requests.post(IFTTT_URL, json=payload)
-        time.sleep(60)  # Send data every 5 minutes
+        time.sleep(3600)  # Send data every 60 minutes
 #button for data collection
 def toggle_data_collection():
     if collecting_data.is_set():
